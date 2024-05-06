@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Text Extracter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://static.vecteezy.com/system/resources/thumbnails/015/634/803/small/circular-hud-connection-with-hexagon-futuristic-modern-website-background-or-cover-page-for-technology-and-finance-concept-and-education-future-company-vector.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .btn {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #0056b3;
+    }
+    input[type="file"] {
+      display: none;
+    }
+    #btn {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <h2>Choose the file</h2>
+    <label for="file-upload" class="btn">CHOOSE THE FILE</label>
+    <input type="file" id="file-upload" name="file" accept=".pdf"><br><br>
+    <input type="submit" name="submit" class="btn" id="btn" value="Extract">
+  </form>
+</body>
+</html>
